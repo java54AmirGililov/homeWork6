@@ -28,9 +28,14 @@ public class ArraysInt {
 		return result;
 	}
 	public static int[] insertSorted (int[] sortedArray, int number) {
-		//TODO
-		//insert number into sorted array with keeping their sorted order
-		//apply method binarySearch of the class Arrays
-		return null;
+	    int index = Arrays.binarySearch(sortedArray, number);
+	    if (index < 0) {
+	        index = -index - 1;
+	    }
+	    int[] result = new int[sortedArray.length + 1];
+	    System.arraycopy(sortedArray, 0, result, 0, index);
+	    result[index] = number;
+	    System.arraycopy(sortedArray, index, result, index + 1, sortedArray.length - index);
+	    return result;
 	}
 }

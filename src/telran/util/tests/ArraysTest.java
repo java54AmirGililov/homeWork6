@@ -81,6 +81,10 @@ int[] array = {10, 25, 30, 40, 100};
 	@Test
 	@DisplayName ("Test of method binarySearchInt")
 	void binarySearchIntTest() {
-		//TODO
+		assertEquals(0, Arrays.binarySearch(array, 30));
+		assertEquals(1, Arrays.binarySearch(array, 30));
+		assertEquals(2, Arrays.binarySearch(array, 30));
+		assertEquals(3, Arrays.binarySearch(array, 30));
+		assertEquals(4, Arrays.binarySearch(array, 30));
 	}
 }
